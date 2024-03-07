@@ -29,7 +29,6 @@ def rps(name='PlayerOne'):
         print(
             f"Python chose {str(RPS(computer)).replace('RPS.', '').title()}."
             )
-
         def decide_winner(player, computer):
             nonlocal name
             nonlocal player_wins
@@ -72,18 +71,13 @@ rock_paper_scissors = rps()
 
 if __name__ == "__main__":
     import argparse
-
     parser = argparse.ArgumentParser(
         description="Provides a personalized game experience."
     )
-    # parser uses keywords, beware of typos
-    # dest="firstname"
     parser.add_argument(
         "-n", "--name", metavar="name", 
         required=True, help="The name of the person to playing the game."
     )
-
     args = parser.parse_args()
-
     rock_paper_scissors = rps(args.name)
     rock_paper_scissors()
