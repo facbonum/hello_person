@@ -22,6 +22,7 @@ def rps(name='PlayerOne'):
         if playerchoice not in ["1", "2", "3"]:
             print(f"{name}, please enter 1, 2, or 3.")
             return play_rps()
+
         player = int(playerchoice)
         computerchoice = random.choice("123")
         computer = int(computerchoice)
@@ -52,8 +53,8 @@ def rps(name='PlayerOne'):
         nonlocal game_count
         game_count += 1
         print(f"\nGame count: {game_count}")
-        print(f"\n{name}'s wins:{player_wins}")
-        print(f"\nPython wins:{python_wins}")
+        print(f"\n{name}'s wins: {player_wins}")
+        print(f"\nPython wins: {python_wins}")
         print(f"\n{name}, play again?")
         while True:
             playagain = input("\nY for Yes or \nQ to Quit\n")
